@@ -12,6 +12,13 @@ Install using pip/pypi:
 pip install silenceofthelambs
 ```
 
+By default, `silenceofthelambs` does not install boto3/botocore (because you may want to use 
+the built-in one in lambda). If you want to install boto3 as well, you can install it as an optional:
+
+```bash
+pip install "silenceofthelambs[with_boto3]"
+```
+
 ## Usage
 
 `silenceofthelambs` has two key usages:
