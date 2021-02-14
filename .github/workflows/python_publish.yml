@@ -31,17 +31,16 @@ jobs:
   publish:
     needs: test
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.8]
+    env:
+      python_version: 3.8
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python ${{ env.python_version }}
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: ${{ env.python_version }}
 
       - name: Install build dependencies
         run: |
