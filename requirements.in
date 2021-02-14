@@ -6,3 +6,5 @@ mypy
 pylint
 pytest
 pytest-cov
+
+build
