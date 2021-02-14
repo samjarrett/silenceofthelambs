@@ -2,7 +2,7 @@ import base64
 import os
 from typing import Dict, Optional
 
-import boto3
+import boto3  # type: ignore
 
 
 def get_values_to_decrypt(variables: Dict[str, str]) -> Dict[str, str]:
