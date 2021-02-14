@@ -4,6 +4,14 @@ A python module that decrypts [shush](https://github.com/realestate-com-au/shush
 KMS-encrypted strings stored in the environment, for use in places where using
 `shush env` as your entrypoint is not an option, e.g. AWS Lambda.
 
+## Installation
+
+Install using pip/pypi:
+
+```bash
+pip install silenceofthelambs
+```
+
 ## Usage
 
 `silenceofthelambs` has two key usages:
