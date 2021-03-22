@@ -24,7 +24,7 @@ coverage==5.4
     # via pytest-cov
 iniconfig==1.1.1
     # via pytest
-isort==5.7.0
+isort==5.8.0
     # via
     #   -r requirements.in
     #   pylint
