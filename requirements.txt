@@ -20,7 +20,7 @@ botocore==1.20.88
     #   s3transfer
 click==7.1.2
     # via black
-coverage[toml]==5.4
+coverage==5.4
     # via pytest-cov
 iniconfig==1.1.1
     # via pytest
@@ -54,7 +54,7 @@ pylint==2.8.3
     # via -r requirements.in
 pyparsing==2.4.7
     # via packaging
-pytest-cov==2.12.0
+pytest-cov==2.12.1
     # via -r requirements.in
 pytest==6.2.4
     # via
@@ -71,9 +71,9 @@ six==1.15.0
 toml==0.10.2
     # via
     #   black
-    #   coverage
     #   pylint
     #   pytest
+    #   pytest-cov
 typed-ast==1.4.2
     # via mypy
 typing-extensions==3.7.4.3
