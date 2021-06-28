@@ -36,12 +36,12 @@ lazy-object-proxy==1.4.3
     # via astroid
 mccabe==0.6.1
     # via pylint
+mypy==0.910
+    # via -r requirements.in
 mypy-extensions==0.4.3
     # via
     #   black
     #   mypy
-mypy==0.902
-    # via -r requirements.in
 packaging==20.9
     # via pytest
 pathspec==0.8.1
@@ -54,12 +54,12 @@ pylint==2.8.3
     # via -r requirements.in
 pyparsing==2.4.7
     # via packaging
-pytest-cov==2.12.1
-    # via -r requirements.in
 pytest==6.2.4
     # via
     #   -r requirements.in
     #   pytest-cov
+pytest-cov==2.12.1
+    # via -r requirements.in
 python-dateutil==2.8.1
     # via botocore
 regex==2020.11.13
