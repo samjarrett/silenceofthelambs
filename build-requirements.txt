@@ -4,7 +4,7 @@
 #
 #    pip-compile build-requirements.in
 #
-build==0.5.1
+build==0.6.0.post1
     # via -r build-requirements.in
 packaging==20.9
     # via build
@@ -13,6 +13,6 @@ pep517==0.9.1
 pyparsing==2.4.7
     # via packaging
 toml==0.10.2
-    # via
-    #   build
-    #   pep517
+    # via pep517
+tomli==1.2.1
+    # via build
