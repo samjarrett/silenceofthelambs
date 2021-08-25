@@ -11,7 +11,7 @@ from .conftest import StubbedClient
 def test_get_values_to_decrypt():
     """Tests main.get_values_to_decrypt()"""
     fake_environ = {"MY": "thing", "SOMETHING": "else"}
-    assert dict() == main.get_values_to_decrypt(fake_environ)
+    assert {} == main.get_values_to_decrypt(fake_environ)
 
     fake_environ = {
         "MY": "thing",
