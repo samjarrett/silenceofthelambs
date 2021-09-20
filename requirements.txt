@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-astroid==2.7.2
+astroid==2.8.0
     # via pylint
 attrs==20.3.0
     # via pytest
@@ -52,7 +52,7 @@ pluggy==0.13.1
     # via pytest
 py==1.10.0
     # via pytest
-pylint==2.10.2
+pylint==2.11.1
     # via -r requirements.in
 pyparsing==2.4.7
     # via packaging
@@ -80,8 +80,10 @@ tomli==1.0.4
     # via black
 typing-extensions==3.10.0.2
     # via
+    #   astroid
     #   black
     #   mypy
+    #   pylint
 urllib3==1.26.3
     # via botocore
 wrapt==1.12.1
