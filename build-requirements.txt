@@ -4,7 +4,7 @@
 #
 #    pip-compile build-requirements.in
 #
-build==0.6.0.post1
+build==0.7.0
     # via -r build-requirements.in
 packaging==20.9
     # via build
