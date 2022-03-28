@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-astroid==2.9.0
+astroid==2.11.2
     # via pylint
 attrs==20.3.0
     # via pytest
@@ -20,6 +20,8 @@ click==8.0.3
     # via black
 coverage[toml]==5.4
     # via pytest-cov
+dill==0.3.4
+    # via pylint
 iniconfig==1.1.1
     # via pytest
 isort==5.10.1
@@ -52,7 +54,7 @@ pluggy==0.13.1
     # via pytest
 py==1.10.0
     # via pytest
-pylint==2.12.2
+pylint==2.13.2
     # via -r requirements.in
 pyparsing==2.4.7
     # via packaging
@@ -69,13 +71,12 @@ s3transfer==0.5.0
 six==1.15.0
     # via python-dateutil
 toml==0.10.2
-    # via
-    #   coverage
-    #   pylint
+    # via coverage
 tomli==1.2.3
     # via
     #   black
     #   mypy
+    #   pylint
     #   pytest
 typing-extensions==3.10.0.2
     # via mypy
