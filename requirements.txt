@@ -22,8 +22,6 @@ coverage[toml]==5.4
     # via pytest-cov
 dill==0.3.4
     # via pylint
-exceptiongroup==1.0.0
-    # via pytest
 iniconfig==1.1.1
     # via pytest
 isort==5.10.1
@@ -38,7 +36,7 @@ lazy-object-proxy==1.4.3
     # via astroid
 mccabe==0.6.1
     # via pylint
-mypy==0.982
+mypy==0.990
     # via -r requirements.in
 mypy-extensions==0.4.3
     # via
@@ -72,12 +70,6 @@ six==1.15.0
     # via python-dateutil
 toml==0.10.2
     # via coverage
-tomli==1.2.3
-    # via
-    #   black
-    #   mypy
-    #   pylint
-    #   pytest
 tomlkit==0.11.0
     # via pylint
 typing-extensions==3.10.0.2
