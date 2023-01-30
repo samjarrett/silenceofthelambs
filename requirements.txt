@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-astroid==2.11.6
+astroid==2.13.3
     # via pylint
 attrs==20.3.0
     # via pytest
@@ -20,7 +20,7 @@ click==8.0.3
     # via black
 coverage[toml]==5.4
     # via pytest-cov
-dill==0.3.4
+dill==0.3.6
     # via pylint
 iniconfig==1.1.1
     # via pytest
@@ -52,7 +52,7 @@ platformdirs==2.2.0
     #   pylint
 pluggy==0.13.1
     # via pytest
-pylint==2.14.5
+pylint==2.15.10
     # via -r requirements.in
 pyparsing==2.4.7
     # via packaging
@@ -76,5 +76,5 @@ typing-extensions==3.10.0.2
     # via mypy
 urllib3==1.26.3
     # via botocore
-wrapt==1.12.1
+wrapt==1.14.1
     # via astroid
