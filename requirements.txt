@@ -6,7 +6,7 @@
 #
 astroid==2.15.4
     # via pylint
-black==23.3.0
+black==23.7.0
     # via -r requirements.in
 boto3==1.28.3
     # via -r requirements.in
