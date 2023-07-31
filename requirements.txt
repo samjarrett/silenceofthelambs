@@ -8,9 +8,9 @@ astroid==2.15.4
     # via pylint
 black==23.7.0
     # via -r requirements.in
-boto3==1.28.9
+boto3==1.28.15
     # via -r requirements.in
-botocore==1.31.9
+botocore==1.31.15
     # via
     #   boto3
     #   s3transfer
