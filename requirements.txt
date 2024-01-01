@@ -54,7 +54,7 @@ pluggy==0.13.1
     # via pytest
 pylint==3.0.3
     # via -r requirements.in
-pytest==7.4.3
+pytest==7.4.4
     # via
     #   -r requirements.in
     #   pytest-cov
