@@ -8,9 +8,9 @@ astroid==3.0.1
     # via pylint
 black==23.12.1
     # via -r requirements.in
-boto3==1.34.14
+boto3==1.34.19
     # via -r requirements.in
-botocore==1.34.14
+botocore==1.34.19
     # via
     #   boto3
     #   s3transfer
@@ -20,7 +20,7 @@ coverage[toml]==5.4
     # via
     #   coverage
     #   pytest-cov
-dill==0.3.6
+dill==0.3.7
     # via pylint
 iniconfig==1.1.1
     # via pytest
