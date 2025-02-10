@@ -22,7 +22,7 @@ dill==0.3.7
     # via pylint
 iniconfig==1.1.1
     # via pytest
-isort==5.13.2
+isort==6.0.0
     # via
     #   -r requirements.in
     #   pylint
