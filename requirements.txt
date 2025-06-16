@@ -51,14 +51,16 @@ platformdirs==2.2.0
     #   black
     #   pylint
 pluggy==1.5.0
-    # via pytest
+    # via
+    #   pytest
+    #   pytest-cov
 pylint==3.3.6
     # via -r requirements.in
 pytest==8.3.5
     # via
     #   -r requirements.in
     #   pytest-cov
-pytest-cov==6.1.1
+pytest-cov==6.2.1
     # via -r requirements.in
 python-dateutil==2.8.1
     # via botocore
