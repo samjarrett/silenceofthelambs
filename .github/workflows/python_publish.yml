@@ -6,21 +6,39 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        python-version: [3.7, 3.8, 3.9]
+        allow-failure: [false]
+        python-version:
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "3.12"
+          - "3.13"
+
+    continue-on-error: ${{ matrix.allow-failure }}
+
+    env:
+      UV_PYTHON: ${{ matrix.python-version }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
+
+      - name: Get uv version
+        run: |
+          UV_VERSION=$(grep "^uv " ".tool-versions" | cut -d' ' -f2)
+          echo "UV_VERSION=$UV_VERSION" >> "$GITHUB_ENV"
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: ${{ matrix.python-version }}
+          version: ${{ env.UV_VERSION }}
+
+      - name: Check python version
+        run: uv run python --version
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        run: uv sync
 
       - name: Run lint
         run: make lint
@@ -32,23 +50,26 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     env:
-      python_version: 3.8
+      UV_PYTHON: 3.13
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
 
-      - name: Set up Python ${{ env.python_version }}
-        uses: actions/setup-python@v2
+      - name: Get uv version
+        run: |
+          UV_VERSION=$(grep "^uv " ".tool-versions" | cut -d' ' -f2)
+          echo "UV_VERSION=$UV_VERSION" >> "$GITHUB_ENV"
+
+      - name: Set up Python ${{ env.python-version }}
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: ${{ env.python_version }}
+          version: ${{ env.UV_VERSION }}
 
       - name: Install build dependencies
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f build-requirements.txt ]; then pip install -r build-requirements.txt; fi
+        run: uv sync --no-dev --group build
 
       - name: Build a binary wheel and a source tarball
-        run: python -m build --sdist --wheel --outdir dist/ .
+        run: uv run python -m build --sdist --wheel --outdir dist/ .
 
       - name: Publish distribution 📦 to PyPI
         if: startsWith(github.ref, 'refs/tags')
