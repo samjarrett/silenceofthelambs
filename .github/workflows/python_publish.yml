@@ -22,10 +22,20 @@ jobs:
       UV_PYTHON: ${{ matrix.python-version }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
+
+      - name: Get uv version
+        run: |
+          UV_VERSION=$(grep "^uv " ".tool-versions" | cut -d' ' -f2)
+          echo "UV_VERSION=$UV_VERSION" >> "$GITHUB_ENV"
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: astral-sh/setup-uv@v6
+        with:
+          version: ${{ env.UV_VERSION }}
+
+      - name: Check python version
+        run: uv run python --version
 
       - name: Install dependencies
         run: uv sync
@@ -43,10 +53,17 @@ jobs:
       UV_PYTHON: 3.13
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
 
-      - name: Set up Python ${{ env.python_version }}
+      - name: Get uv version
+        run: |
+          UV_VERSION=$(grep "^uv " ".tool-versions" | cut -d' ' -f2)
+          echo "UV_VERSION=$UV_VERSION" >> "$GITHUB_ENV"
+
+      - name: Set up Python ${{ env.python-version }}
         uses: astral-sh/setup-uv@v6
+        with:
+          version: ${{ env.UV_VERSION }}
 
       - name: Install build dependencies
         run: uv sync --no-dev --group build
