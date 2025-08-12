@@ -1,4 +1,4 @@
-FILES := silenceofthelambs tests setup.py
+FILES := silenceofthelambs tests
 
 lint:
 	pylint ${FILES}
