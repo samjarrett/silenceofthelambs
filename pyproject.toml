@@ -1,3 +1,26 @@
+[project]
+name = "silenceofthelambs"
+version = "0.1.0"
+description = "Decrypt shush-like KMS-encrypted strings stored in the environment"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[dependency-groups]
+build = [
+    "build>=1.3.0",
+]
+dev = [
+    "black>=25.1.0",
+    "boto3>=1.40.7",
+    "isort>=6.0.1",
+    "mypy>=1.17.1",
+    "pylint>=3.3.8",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+    "setuptools>=80.9.0",
+]
+
 [build-system]
 requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
 build-backend = "setuptools.build_meta"

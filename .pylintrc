@@ -9,7 +9,6 @@ jobs=0
 
 # Disable the message, report, category or checker with the given id(s).
 disable=missing-module-docstring,
-        C0330, C0326,
         unsubscriptable-object
         # https://github.com/PyCQA/pylint/issues/3882
 
@@ -44,4 +43,3 @@ max-returns=3
 
 # Maximum number of statements in function / method body.
 max-statements=25
-

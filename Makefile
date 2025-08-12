@@ -1,15 +1,15 @@
-FILES := silenceofthelambs tests
+FILES := silenceofthelambs tests setup.py
 
 lint:
-	pylint ${FILES}
-	black --check ${FILES}
-	isort ${FILES} --check-only
+	uv run pylint ${FILES}
+	uv run black --check ${FILES}
+	uv run isort ${FILES} --check-only
 
 test:
-	pytest --cov silenceofthelambs
-	mypy silenceofthelambs
+	uv run pytest --cov silenceofthelambs
+	uv run mypy silenceofthelambs
 
 fix:
-	black ${FILES}
-	isort ${FILES}
+	uv run black ${FILES}
+	uv run isort ${FILES}
 	$(MAKE) lint

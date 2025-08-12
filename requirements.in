@@ -1,8 +1,0 @@
-boto3
-
-black
-isort
-mypy
-pylint
-pytest
-pytest-cov
